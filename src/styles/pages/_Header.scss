@@ -5,14 +5,14 @@
     border-bottom: 1px solid #e8e8e8;
 
     .header-section__top__links {
-      text-align: center;
-
       a {
         cursor: pointer;
+
         img {
           vertical-align: sub;
           margin-right: 8px;
         }
+
         span {
           font-size: 11px;
           font-weight: 600;
@@ -23,6 +23,7 @@
         }
       }
     }
+
     .header-section__top__advance__search {
       border: 1px solid #dcdcdc;
       padding: 3px;
@@ -33,16 +34,19 @@
 
       form {
         position: relative;
+        display: flex;
 
         .advance-search__input {
           border-right: 1px solid #dcdcdc;
           float: left;
-          width: 260px;
+          width: 230px;
 
           input {
             height: 37px;
             border: none;
             line-height: 25px;
+            font-size: 14px;
+            font-weight: 500;
             padding: 6px 16px;
             width: 100%;
             color: $font-color;
@@ -54,6 +58,7 @@
             }
           }
         }
+
         .advance-search__select {
           float: left;
           width: 130px;
@@ -99,6 +104,7 @@
               transition: all 0.15s ease-in-out;
             }
           }
+
           .nice--select {
             float: right;
             clear: none;
@@ -117,6 +123,7 @@
               line-height: 37px;
               color: #444444;
             }
+
             .nice__select__list {
               background: $select-bg;
               border-radius: 5px;
@@ -139,6 +146,7 @@
                 font-size: 13px;
                 font-weight: 400;
               }
+
               .option {
                 cursor: pointer;
                 font-weight: 400;
@@ -150,17 +158,22 @@
                 padding-right: 29px;
                 text-align: left;
                 transition: all 0.2s;
+
                 &:hover {
                   background: #f6f6f6;
+                  color: #202020;
+                  font-weight: 600;
                 }
               }
             }
+
             &.open {
               .nice__select__list {
                 opacity: 1;
                 pointer-events: auto;
                 transform: scale(1) translateY(0);
               }
+
               &:after {
                 transform: rotate(-135deg);
               }
@@ -197,6 +210,7 @@
             &:hover {
               background-color: #000;
             }
+
             &:focus {
               outline: none;
             }
@@ -204,17 +218,18 @@
         }
       }
     }
+
     .header-section__top__account__links {
-      text-align: start;
+      text-align: end;
 
       a {
         color: #000;
         text-transform: uppercase;
-        margin-right: 20px;
         line-height: 37px;
         font-size: 14px;
         font-weight: 700;
-        span {
+        display: inline-block;
+        &:first-child {
           margin-right: 40px;
         }
 
@@ -239,12 +254,14 @@
       }
     }
   }
+
   .header-section__bottom {
     .header-section__bottom__logo {
       position: relative;
       vertical-align: top;
       display: inline-block;
     }
+
     .header-section__bottom__menu {
       nav {
         & > ul {
@@ -272,6 +289,7 @@
                 color: #202020;
               }
             }
+
             &.menu__item__children {
               & > a {
                 &:after {
@@ -290,6 +308,7 @@
                 }
               }
             }
+
             .menu__item__sub {
               position: absolute;
               left: -20px;
@@ -316,12 +335,14 @@
                   text-transform: capitalize;
                 }
               }
+
               .menu__item__sub {
                 left: 100%;
                 right: auto;
                 top: 0;
               }
             }
+
             .menu__item__mega {
               display: flex;
               position: absolute;
@@ -340,6 +361,7 @@
               &.three-column {
                 left: -300px;
               }
+
               & > li {
                 width: 33.33%;
                 padding: 20px 15px;
@@ -366,9 +388,11 @@
               }
             }
           }
-          li &:last-child {
-            margin-right: 0;
-          }
+
+          // li &:last-child {
+          //   margin-right: 0;
+          // }
+
           & > {
             li {
               .menu__item__children {
@@ -388,6 +412,7 @@
                       top: 14px;
                       transform: rotate(322deg);
                     }
+
                     &:hover {
                       &:after {
                         border-bottom: 2px solid #202020;
@@ -397,6 +422,7 @@
                   }
                 }
               }
+
               &:hover {
                 & > {
                   .menu__item__sub {
@@ -404,12 +430,14 @@
                     visibility: visible;
                     margin-top: 0;
                     z-index: 999;
+
                     a {
                       &:hover {
                         color: #202020;
                         font-weight: 600;
                       }
                     }
+
                     li {
                       opacity: 1;
                       visibility: visible;
@@ -417,6 +445,7 @@
                       z-index: 999;
                     }
                   }
+
                   .menu__item__mega {
                     opacity: 1;
                     visibility: visible;
@@ -437,6 +466,7 @@
         }
       }
     }
+
     .menu__item__sub {
       li {
         &:hover {
@@ -452,11 +482,15 @@
       }
     }
   }
+
   .header-section__bottom__shop__links {
+    display: flex;
+    justify-content: flex-end;
+
     a {
       color: #444444;
       float: left;
-      margin-right: 30px;
+      margin-left: 30px;
 
       svg {
         font-size: 30px;
@@ -464,6 +498,7 @@
         display: block;
         float: left;
       }
+
       .number {
         width: 20px;
         height: 20px;
@@ -482,6 +517,7 @@
       }
     }
   }
+
   .header__category__section {
     .header__category {
       background-color: #f5d730;
@@ -522,6 +558,7 @@
       ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         li {
           display: inline-flex;
@@ -529,10 +566,10 @@
 
           a {
             display: block;
-            font-size: 15px;
+            font-size: 14px;
             text-transform: uppercase;
             color: #202020;
-            font-weight: 700;
+            font-weight: bold;
             line-height: 30px;
             width: 100%;
           }

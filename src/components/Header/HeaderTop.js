@@ -7,7 +7,7 @@ import Marker from "../../assets/icons/marker.png";
 const HeaderTop = () => {
   return (
     <div className="header-section__top header-top__one pt-2 pb-2">
-      <Container fluid>
+      <Container>
         <Row className="align-items-center ">
           <Col className="mt-3 mb-3">
             <div className="header-section__top__links ">
@@ -32,7 +32,10 @@ const HeaderTop = () => {
                 <i className="icofont icofont-user-alt-7" />
                 <span>My Account</span>
               </a>
-              <a href="#">Login</a>
+              <a href="#">
+                <i className="icofont icofont-login" />
+                <span>Login</span>
+              </a>
             </div>
           </Col>
         </Row>

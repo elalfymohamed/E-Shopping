@@ -11,7 +11,7 @@ const HeaderBottom = () => {
 
   return (
     <div className="header-section__bottom header__sticky">
-      <Container fluid>
+      <Container>
         <Row className="align-items-center">
           <Col>
             <div className="header-section__bottom__logo">
@@ -20,7 +20,7 @@ const HeaderBottom = () => {
               </a>
             </div>
           </Col>
-          <Col>
+          <Col className="d-contents">
             <div className="header-section__bottom__menu">
               <Menu />
             </div>

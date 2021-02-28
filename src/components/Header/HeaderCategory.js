@@ -5,7 +5,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 const HeaderCategory = () => {
   return (
     <div className="header__category__section">
-      <Container fluid>
+      <Container>
         <Row>
           <Col>
             <div className="header__category">
