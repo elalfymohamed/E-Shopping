@@ -17,7 +17,7 @@ const HeaderTop = () => {
               </a>
               <a to="/">
                 <img src={Marker} alt="Marker" />
-                <span> Track your order </span>
+                <span> Locate Store </span>
               </a>
             </div>
           </Col>

@@ -54,18 +54,20 @@
             }
 
             h2 {
-              font-size: 70px;
+              font-size: 90px;
               font-weight: 400;
-              line-height: 80px;
+              line-height: 100px;
               margin: 0;
 
               span {
                 font-weight: 900;
                 transition: all 0.3s ease 0s;
+                font-family: $font-family_bold;
+                color: #202020;
               }
             }
             &.big {
-              font-size: 85px;
+              font-size: 95px;
             }
 
             a {
@@ -84,6 +86,12 @@
               margin-top: 20px;
             }
           }
+          .hero__slink__image {
+            img {
+              animation-delay: 1s;
+              animation-name: fadeInUp;
+            }
+          }
         }
       }
     }
@@ -94,11 +102,78 @@
       animation-name: fadeInUp;
     }
   }
+
+  .hero-section__banner {
+    a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+      &::after {
+        left: 180%;
+        @include hero__bonner_a_b;
+      }
+      &::before {
+        left: -85%;
+        @include hero__bonner_a_b;
+      }
+      &:hover {
+        &::after {
+          left: -280px;
+          @include hero__bonner_a_b_hov;
+        }
+        &::before {
+          left: 180%;
+          @include hero__bonner_a_b_hov;
+        }
+      }
+    }
+  }
+
+  .hero__slick__dots {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+
+    li {
+      float: left;
+      margin-right: 5px;
+
+      button {
+        border: 1px solid #959595;
+        background: transparent;
+        text-indent: -99999px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        display: block;
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      &.hero__slick__dots__active {
+        button {
+          border-color: #202020;
+        }
+      }
+    }
+  }
 }
 
 .hero__slink__content {
   & > * {
     animation-duration: 1s;
     animation-fill-mode: both;
+    animation-name: fadeInUp;
+  }
+}
+.hero__slink__image {
+  img {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
   }
 }

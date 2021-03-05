@@ -1,6 +1,6 @@
 /* Font-Family OpenSans-Regular*/
 @font-face {
-  font-family: "Open Sans Regular";
+  font-family: "Open Sans-Regular";
   src: url("../assets/font/OpenSans-Regular/OpenSans-Regular.eot");
   src: url("../assets/font/OpenSans-Regular/OpenSans-Regular.eot?#iefix") format("embedded-opentype"),
     url("../assets/font/OpenSans-Regular/OpenSans-Regular.woff2") format("woff2"),
@@ -10,12 +10,15 @@
 }
 
 /* Font-Family OpenSans-Bold */
+
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url("../assets/font/OpenSans-Bold/OpenSans-Bold.eot");
-  src: url("../assets/font/OpenSans-Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../assets/font/OpenSans-Bold/OpenSans-Bold.woff2") format("woff2"),
-    url("../assets/font/OpenSans-Bold/OpenSans-Bold.woff") format("woff"),
-    url("../assets/font/OpenSans-Bold/OpenSans-Bold.ttf") format("truetype"),
-    url("../assets/font/OpenSans-Bold/OpenSans-Bold.svg#svgFontName") format("svg");
+  font-family: "Open Sans-bold";
+  src: url("../assets/font/OpenSane-Bold/OpenSans-Bold.eot");
+  src: url("../assets/font/OpenSane-Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/font/OpenSane-Bold/OpenSans-Bold.woff2") format("woff2"),
+    url("../assets/font/OpenSane-Bold/OpenSans-Bold.woff") format("woff"),
+    url("../assets/font/OpenSane-Bold/OpenSans-Bold.ttf") format("truetype"),
+    url("../assets/font/OpenSane-Bold/OpenSans-Bold.svg#svgFontName") format("svg");
 }
+
+/* Font-Family OpenSans-Light */
