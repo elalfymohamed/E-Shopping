@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 const HeaderSearch = () => {
   const [open, setOpen] = useState(false);
-  const [options, setOptions] = useState("All Categories");
-
-  const handleChange = (e) => {
-    console.log();
-    setOptions();
-  };
+  const [push, setPush] = useState("All Categories");
+  const [options, setOptions] = useState([
+    "All Categories",
+    "Mobile",
+    "Computer",
+    "Laptop",
+    "Camera",
+  ]);
 
   return (
     <form>
@@ -15,38 +17,35 @@ const HeaderSearch = () => {
         <input type="text" placeholder="Search your product" />
       </div>
       <div className="advance-search__select" onClick={() => setOpen(!open)}>
-        {/* <select
+        <select
           className="advance-search__nice__select"
           style={{ display: "none" }}
         >
-          <option>All Categories</option>
-          <option>Mobile</option>
-          <option>Computer</option>
-          <option>Laptop</option>
-          <option>Camera</option>
-        </select> */}
+          {options.map((item, i) => (
+            <option data-value={item} className="option" key={i}>
+              {item}
+            </option>
+          ))}
+        </select>
         <div
           className={`advance-search__nice__select nice--select ${
             open ? "open" : ""
           }`}
         >
-          <span className="nice__select__current"> {options}</span>
-          <ul className="nice__select__list" onClick={handleChange}>
-            <li value="All Categories" className="option selected focus">
-              All Categories
-            </li>
-            <li value="Mobile" className="option">
-              Mobile
-            </li>
-            <li value="Computer" className="option">
-              Computer
-            </li>
-            <li value="Laptop" className="option">
-              Laptop
-            </li>
-            <li value="Camera" className="option">
-              Camera
-            </li>
+          <span className="nice__select__current">{push}</span>
+          <ul className="nice__select__list">
+            {options.map((item, i) => (
+              <li
+                data-value={item}
+                className={`option ${push === item ? "selected" : ""} ${
+                  open && push === item ? "focus" : ""
+                }`}
+                key={i}
+                onClick={() => setPush(item)}
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -21,4 +21,14 @@
     url("../assets/font/OpenSane-Bold/OpenSans-Bold.svg#svgFontName") format("svg");
 }
 
-/* Font-Family OpenSans-Light */
+/* Font-Family Oswald*/
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../assets/font/Oswald/Oswald-Regular.eot");
+  src: url("../assets/font/Oswald/Oswald-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../assets/font/Oswald/Oswald-Regular.woff2") format("woff2"),
+    url("../assets/font/Oswald/Oswald-Regular.woff") format("woff"),
+    url("../assets/font/Oswald/Oswald-Regular.ttf") format("truetype"),
+    url("../assets/font/Oswald/Oswald-Regular.svg#svgFontName") format("svg");
+}

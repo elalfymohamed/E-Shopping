@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import SlickButton from "./SlickButton";
 
 const Slick = ({ slides }) => {
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const length = slides.length;
 
-  const next = () => {
-    setCurrentIdx(currentIdx === length - 1 ? 0 : currentIdx + 1);
-  };
+  const length = slides.length;
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
-  console.log(currentSlideIdx);
+
   useEffect(() => {
     setTimeout(() => {
       setCurrentSlideIdx(
@@ -41,7 +38,6 @@ const Slick = ({ slides }) => {
                     key={item.id}
                     aria-hidden={`${i === currentSlideIdx ? "false" : "true"}`}
                     tabIndex={`${i === currentSlideIdx ? "0" : "-1"}`}
-                    role="tabpanel"
                     title={item.product_name}
                     style={{
                       width: "1110px",
@@ -58,7 +54,9 @@ const Slick = ({ slides }) => {
                     <Row className="align-items-center justify-content-between">
                       <Col
                         className={`${
-                          i === currentSlideIdx ? "hero__slink__content" : ""
+                          i === currentSlideIdx
+                            ? "hero__slink__content"
+                            : "hero__slink__content__out_up"
                         }`}
                       >
                         <h3>{item.title}</h3>
@@ -71,18 +69,20 @@ const Slick = ({ slides }) => {
                           {item.off}
                         </h2>
                         <div className="mt-4">
-                          <a
-                            href={item.link}
+                          <Link
+                            to={item.link}
                             tabIndex={`${i === currentSlideIdx ? "0" : "-1"}`}
                           >
                             Get It Now
-                          </a>
+                          </Link>
                         </div>
                       </Col>
                       <Col
                         lg={4}
                         className={`p-0 text-end  ${
-                          i === currentSlideIdx ? "hero__slink__image" : ""
+                          i === currentSlideIdx
+                            ? "hero__slink__image"
+                            : "hero__slink__image__out_up"
                         }`}
                       >
                         <img
@@ -98,7 +98,12 @@ const Slick = ({ slides }) => {
               </div>
             </div>
           </div>
-          <SlickButton onCurrent={setCurrentIdx} setOnCurrent={currentIdx} />
+          <SlickButton
+            setOnCurrent={setCurrentSlideIdx}
+            onCurrent={currentSlideIdx}
+            length={length}
+            slides={slides}
+          />
         </Col>
       </Row>
     </Container>

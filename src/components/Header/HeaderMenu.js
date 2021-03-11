@@ -1,28 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeaderMenu = () => {
   return (
     <nav>
       <ul>
         <li className="active">
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className=" menu__item__children">
-          <a href="#">Shop</a>
+          <Link to="/">Shop</Link>
           <ul className="menu__item__sub">
             <li className="menu__item__children">
-              <a href="#">shop grid</a>
+              <Link to="/">shop grid</Link>
               <ul className="menu__item__sub">
                 <li>
-                  <a href="#">shop grid</a>
+                  <Link to="/">shop grid</Link>
                 </li>
               </ul>
             </li>
             <li className="menu__item__children">
-              <a href="#">Single Product</a>
+              <Link to="/">Single Product</Link>
               <ul className="menu__item__sub">
                 <li>
-                  <a href="#">Single Product</a>
+                  <Link to="/">Single Product</Link>
                 </li>
               </ul>
             </li>
@@ -30,61 +31,61 @@ const HeaderMenu = () => {
         </li>
 
         <li className="menu__item__children">
-          <a href="#">PAGES</a>
+          <Link to="/">PAGES</Link>
 
           <ul className="menu__item__mega three-column">
             <li>
-              <a href="#">Column One</a>
+              <Link to="/">Column One</Link>
               <ul>
                 <li>
-                  <a href="#">About us</a>
+                  <Link to="/">About us</Link>
                 </li>
                 <li>
-                  <a href="#">Best Deals</a>
+                  <Link to="/">Best Deals</Link>
                 </li>
                 <li>
-                  <a href="#">Cart</a>
+                  <Link to="/">Cart</Link>
                 </li>
                 <li>
-                  <a href="#">Checkout</a>
+                  <Link to="/">Checkout</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">Column Two</a>
+              <Link to="/">Column Two</Link>
               <ul>
                 <li>
-                  <a href="#">Compare</a>
+                  <Link to="/">Compare</Link>
                 </li>
                 <li>
-                  <a href="#">Faq</a>
+                  <Link to="/">Faq</Link>
                 </li>
                 <li>
-                  <a href="#">Feature</a>
+                  <Link to="/">Feature</Link>
                 </li>
                 <li>
-                  <a href="#">Login</a>
+                  <Link to="/">Login</Link>
                 </li>
                 <li>
-                  <a href="#">Register</a>
+                  <Link to="/">Register</Link>
                 </li>
                 <li>
-                  <a href="#">Store</a>
+                  <Link to="/">Store</Link>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="#">Column Three</a>
+              <Link to="/">Column Three</Link>
               <ul>
                 <li>
-                  <a href="#">Terms &amp; Conditions</a>
+                  <Link to="/">Terms &amp; Conditions</Link>
                 </li>
                 <li>
-                  <a href="#">Track Order</a>
+                  <Link to="/">Track Order</Link>
                 </li>
                 <li>
-                  <a href="#">Wishlist</a>
+                  <Link to="/">Wishlist</Link>
                 </li>
               </ul>
             </li>
@@ -92,19 +93,19 @@ const HeaderMenu = () => {
         </li>
 
         <li className="menu__item__children">
-          <a href="#">BLOG</a>
+          <Link to="/">BLOG</Link>
           <ul className="menu__item__sub">
             <li>
-              <a href="#">Blog 1 Column Left Sidebar</a>
+              <Link to="/">Blog 1 Column Left Sidebar</Link>
             </li>
             <li>
-              <a href="#">Single Blog Left Sidebar</a>
+              <Link to="/">Single Blog Left Sidebar</Link>
             </li>
           </ul>
         </li>
 
         <li>
-          <a href="#">CONTACT</a>
+          <Link to="/">CONTACT</Link>
         </li>
       </ul>
     </nav>

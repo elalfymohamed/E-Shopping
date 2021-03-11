@@ -89,17 +89,10 @@
           .hero__slink__image {
             img {
               animation-delay: 1s;
-              animation-name: fadeInUp;
             }
           }
         }
       }
-    }
-  }
-
-  .hero__slink__content {
-    & > * {
-      animation-name: fadeInUp;
     }
   }
 
@@ -175,5 +168,19 @@
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: fadeInUp;
+  }
+}
+.hero__slink__content__out_up {
+  & > * {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOntUp;
+  }
+}
+.hero__slink__image__out_up {
+  img {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOntUp;
   }
 }

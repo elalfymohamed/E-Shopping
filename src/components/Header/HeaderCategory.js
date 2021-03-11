@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Col, Row } from "react-bootstrap";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
@@ -18,22 +19,22 @@ const HeaderCategory = () => {
               <nav className="header__category__menu">
                 <ul>
                   <li>
-                    <a href="#">Tv &amp; Audio System</a>
+                    <Link to="/">Tv &amp; Audio System</Link>
                   </li>
                   <li>
-                    <a href="#">Computer &amp; Laptop</a>
+                    <Link to="/">Computer &amp; Laptop</Link>
                   </li>
                   <li>
-                    <a href="#">Phones &amp; Tablets</a>
+                    <Link to="/">Phones &amp; Tablets</Link>
                   </li>
                   <li>
-                    <a href="#">Home Appliances</a>
+                    <Link to="/">Home Appliances</Link>
                   </li>
                   <li>
-                    <a href="#">Kitchen appliances</a>
+                    <Link to="/">Kitchen appliances</Link>
                   </li>
                   <li>
-                    <a href="#">Accessories</a>
+                    <Link to="/">Accessories</Link>
                   </li>
                 </ul>
               </nav>
