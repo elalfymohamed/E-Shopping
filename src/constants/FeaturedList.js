@@ -1,8 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { Col } from "react-bootstrap";
+import FeaturedAllData from "../data/FeaturedAllData";
+import FeaturedDroneData from "../data/FeaturedDroneData";
+import FeaturedLaptopData from "../data/FeaturedLaptopData";
 
-const FeaturedList = () => {
+const FeaturedList = ({ onPushData, pushData }) => {
+  const [added, setAdded] = useState("");
+
   return (
     <Col lg="12" className="mb-4">
       <div className="section-featured__product__filter">
@@ -13,34 +17,54 @@ const FeaturedList = () => {
         </button>
         <ul className="product__filter__list">
           <li>
-            <Link className="active" data-toggle="tab" to="/">
+            <div
+              className={`${added ? "" : "active"}`}
+              data-toggle="tab"
+              onClick={() => onPushData(FeaturedAllData) || setAdded("active")}
+            >
               all
-            </Link>
+            </div>
           </li>
           <li>
-            <Link data-toggle="tab" to="/">
+            <div
+              data-toggle="tab"
+              className={`${added}`}
+              onClick={() =>
+                onPushData(FeaturedLaptopData) || setAdded("active")
+              }
+            >
               LAPTOP
-            </Link>
+            </div>
           </li>
           <li>
-            <Link data-toggle="tab" to="/">
+            <div
+              data-toggle="tab"
+              className={`${added}`}
+              onClick={() => onPushData(FeaturedDroneData)}
+            >
               DRONE
-            </Link>
+            </div>
           </li>
           <li>
-            <Link data-toggle="tab" to="/">
+            <div data-toggle="tab" onClick={() => onPushData(FeaturedAllData)}>
               TV &amp; AUDIO
-            </Link>
+            </div>
           </li>
           <li>
-            <Link data-toggle="tab" to="/">
+            <div
+              data-toggle="tab"
+              onClick={() => onPushData(FeaturedLaptopData)}
+            >
               PHONE &amp; TABLET
-            </Link>
+            </div>
           </li>
           <li>
-            <Link data-toggle="tab" to="/">
+            <div
+              data-toggle="tab"
+              onClick={() => onPushData(FeaturedDroneData)}
+            >
               CAMERA &amp; PRINTER
-            </Link>
+            </div>
           </li>
         </ul>
       </div>

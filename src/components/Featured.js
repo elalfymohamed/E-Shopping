@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-
-import { Title, FeaturedList } from "../constants";
+import { Title, FeaturedList, FeaturedSlide } from "../constants";
 
 const Featured = () => {
   return (
@@ -9,7 +8,7 @@ const Featured = () => {
       <Container>
         <Row>
           <Title title="Featured Items" />
-          <FeaturedList />
+          <FeaturedSlide />
         </Row>
       </Container>
     </section>

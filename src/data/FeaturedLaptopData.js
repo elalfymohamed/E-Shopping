@@ -16,7 +16,7 @@ export default [
     sale: "sale",
     product_name: "Necta Instant Camera",
     price: "$330.00",
-    offer: "230.00",
+    offer: "$230.00",
     src: product,
   },
   {
@@ -40,7 +40,7 @@ export default [
     sale: "sale",
     product_name: "Axor Digital camera",
     price: "$265.00",
-    offer: "199.00",
+    offer: "$199.00",
     src: product,
   },
   {
@@ -64,7 +64,7 @@ export default [
     sale: "sale",
     product_name: "Necta Instant Camera",
     price: "$330.00",
-    offer: "230.00",
+    offer: "$230.00",
     src: product,
   },
   {
@@ -73,6 +73,22 @@ export default [
     new: "New",
     product_name: "Mascut Smart Watch",
     price: "$230.00",
+    src: product,
+  },
+  {
+    id: uuidv4(),
+    section: "Camera",
+    product_name: "Silvex DSLR Camera T 32",
+    price: "$593.00",
+    src: product,
+  },
+  {
+    id: uuidv4(),
+    section: "Camera",
+    sale: "sale",
+    product_name: "Necta Instant Camera",
+    price: "$330.00",
+    offer: "$230.00",
     src: product,
   },
 ];
