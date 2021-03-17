@@ -4,8 +4,14 @@ import FeaturedAllData from "../data/FeaturedAllData";
 import FeaturedDroneData from "../data/FeaturedDroneData";
 import FeaturedLaptopData from "../data/FeaturedLaptopData";
 
-const FeaturedList = ({ onPushData, pushData }) => {
-  const [added, setAdded] = useState("");
+const List = ({ onPushData }) => {
+  const [added, setAdded] = useState(0);
+  const allData = 0;
+  const laptopData = 1;
+  const droneData = 2;
+  const tvData = 3;
+  const phoneData = 4;
+  const cameraData = 5;
 
   return (
     <Col lg="12" className="mb-4">
@@ -18,9 +24,9 @@ const FeaturedList = ({ onPushData, pushData }) => {
         <ul className="product__filter__list">
           <li>
             <div
-              className={`${added ? "" : "active"}`}
+              className={`${allData === added ? "active" : ""}`}
               data-toggle="tab"
-              onClick={() => onPushData(FeaturedAllData) || setAdded("active")}
+              onClick={() => onPushData(FeaturedAllData) || setAdded(allData)}
             >
               all
             </div>
@@ -28,9 +34,9 @@ const FeaturedList = ({ onPushData, pushData }) => {
           <li>
             <div
               data-toggle="tab"
-              className={`${added}`}
+              className={`${laptopData === added ? "active" : ""}`}
               onClick={() =>
-                onPushData(FeaturedLaptopData) || setAdded("active")
+                onPushData(FeaturedLaptopData) || setAdded(laptopData)
               }
             >
               LAPTOP
@@ -39,21 +45,30 @@ const FeaturedList = ({ onPushData, pushData }) => {
           <li>
             <div
               data-toggle="tab"
-              className={`${added}`}
-              onClick={() => onPushData(FeaturedDroneData)}
+              className={`${droneData === added ? "active" : ""}`}
+              onClick={() =>
+                onPushData(FeaturedDroneData) || setAdded(droneData)
+              }
             >
               DRONE
             </div>
           </li>
           <li>
-            <div data-toggle="tab" onClick={() => onPushData(FeaturedAllData)}>
+            <div
+              data-toggle="tab"
+              className={`${tvData === added ? "active" : ""}`}
+              onClick={() => onPushData(FeaturedAllData) || setAdded(tvData)}
+            >
               TV &amp; AUDIO
             </div>
           </li>
           <li>
             <div
               data-toggle="tab"
-              onClick={() => onPushData(FeaturedLaptopData)}
+              className={`${phoneData === added ? "active" : ""}`}
+              onClick={() =>
+                onPushData(FeaturedLaptopData) || setAdded(phoneData)
+              }
             >
               PHONE &amp; TABLET
             </div>
@@ -61,7 +76,10 @@ const FeaturedList = ({ onPushData, pushData }) => {
           <li>
             <div
               data-toggle="tab"
-              onClick={() => onPushData(FeaturedDroneData)}
+              className={`${cameraData === added ? "active" : ""}`}
+              onClick={() =>
+                onPushData(FeaturedDroneData) || setAdded(cameraData)
+              }
             >
               CAMERA &amp; PRINTER
             </div>
@@ -72,4 +90,4 @@ const FeaturedList = ({ onPushData, pushData }) => {
   );
 };
 
-export default FeaturedList;
+export default List;

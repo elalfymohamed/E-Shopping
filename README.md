@@ -31,10 +31,16 @@ yarn  build
 
 ### Tools
 
- 1- React-Hooks
+ 1 - React-Hooks
 
- 2- webpack
+ 2 - Redux
 
- 4- babelrc
+ 3 - Sass
 
- 5- eslintrc
+ 4 - Bootstrap (Grid)
+
+ 5 - webpack
+
+ 6 - babelrc
+
+ 7 - eslintrc

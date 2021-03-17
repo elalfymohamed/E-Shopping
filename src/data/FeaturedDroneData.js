@@ -5,7 +5,7 @@ export default [
   {
     id: uuidv4(),
     section: "Laptop",
-    new: "New",
+    new_product: "New",
     product_name: "Zeon Zen 4 Pro",
     price: "$230.00",
     src: product,
@@ -29,7 +29,7 @@ export default [
   {
     id: uuidv4(),
     section: "Accessories",
-    new: "New",
+    new_product: "New",
     product_name: "Roxxe Headphone Z 75",
     price: "$110.00",
     src: product,

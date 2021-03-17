@@ -22,7 +22,7 @@ export default [
   {
     id: uuidv4(),
     section: "Watch",
-    new: "New",
+    new_product: "New",
     product_name: "Mascut Smart Watch",
     price: "$230.00",
     src: product,
@@ -53,7 +53,7 @@ export default [
   {
     id: uuidv4(),
     section: "Camera",
-    new: "New",
+    new_product: "New",
     product_name: "Necta Instant Camera",
     price: "$320.00",
     src: product,
@@ -70,7 +70,7 @@ export default [
   {
     id: uuidv4(),
     section: "Watch",
-    new: "New",
+    new_product: "New",
     product_name: "Mascut Smart Watch",
     price: "$230.00",
     src: product,

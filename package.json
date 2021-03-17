@@ -2,11 +2,15 @@
   "name": "shopping",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.22.0"
+  },
   "scripts": {
     "start": "webpack serve --mode=development --hot",
     "dev": "webpack --mode development ",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "eslint ./src  --fix"
   },
   "keywords": [],
   "author": "",
