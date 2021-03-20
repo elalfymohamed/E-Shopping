@@ -10,14 +10,22 @@ const FeaturedSlide = () => {
   const [pushData, setPushData] = useState(FeaturedAllData);
   const length = pushData.length;
 
-  // if (!Array.isArray(pushData) || pushData.length <= 0) {
-  //   return null;
-  // }
+  if (!Array.isArray(pushData) || pushData.length <= 0) {
+    return null;
+  }
+
   const nextSlide = () => {
     setCurrentSlideIdx(
       currentSlideIdx === length - 1 ? 0 : currentSlideIdx + 1
     );
     setTransWight(transWight === -2400 ? -1200 : transWight + -300);
+    // let slickElm = document.querySelector(
+    //   ".section-featured__content__slick__list"
+    // );
+    // slickElm.classList.add("content__slick__track");
+    // setTimeout(() => {
+    //   slickElm.classList.remove("content__slick__track");
+    // }, 1000);
   };
   const prevSlide = () => {
     setCurrentSlideIdx(
@@ -25,6 +33,17 @@ const FeaturedSlide = () => {
     );
     setTransWight(transWight === 0 ? -2400 : transWight - -300);
   };
+
+  // const slickElm = document.querySelector(
+  //   ".section-featured__content__slick__list"
+  // );
+
+  // slickElm.addEventListener("fullscreenchange", () => {
+  //   setCurrentSlideIdx(
+  //     currentSlideIdx === 0 ? length - 1 : currentSlideIdx - 1
+  //   );
+  //   setTransWight(transWight === 0 ? -2400 : transWight - -300);
+  // });
 
   return (
     <>
@@ -47,7 +66,7 @@ const FeaturedSlide = () => {
                   className="section-featured__content__slick__list slick--slick"
                   style={{
                     opacity: 1,
-                    width: "4200px",
+                    width: "4500px",
                     transform: `translate3d( ${transWight}px, 0px, 0px)`,
                     transition: `${
                       currentSlideIdx && `transform 500ms ease 0s`
@@ -56,11 +75,15 @@ const FeaturedSlide = () => {
                 >
                   <div className="section-featured__content__slick__track">
                     {pushData.map((item) => (
-                      <Slides
+                      <Col
+                        className="pb-4 pt-4 slick__slide "
+                        aria-hidden="false"
+                        tabIndex="-1"
+                        style={{ width: "300px" }}
                         key={item.id}
-                        {...item}
-                        onChange={currentSlideIdx}
-                      />
+                      >
+                        <Slides {...item} onChange={currentSlideIdx} />
+                      </Col>
                     ))}
                   </div>
                 </div>

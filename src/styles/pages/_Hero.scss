@@ -96,36 +96,6 @@
     }
   }
 
-  .hero-section__banner {
-    a {
-      display: block;
-      position: relative;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-      }
-      &::after {
-        left: 180%;
-        @include hero__bonner_a_b;
-      }
-      &::before {
-        left: -85%;
-        @include hero__bonner_a_b;
-      }
-      &:hover {
-        &::after {
-          left: -280px;
-          @include hero__bonner_a_b_hov;
-        }
-        &::before {
-          left: 180%;
-          @include hero__bonner_a_b_hov;
-        }
-      }
-    }
-  }
-
   .hero__slick__dots {
     position: absolute;
     left: 100px;

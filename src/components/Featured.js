@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { Title, FeaturedList, FeaturedSlide } from "../constants";
+import { Title, FeaturedSlide } from "../constants";
 
 const Featured = () => {
   return (
-    <section className="section-featured" style={{ height: "1000px" }}>
+    <section className="section-featured mb-5 pb-4">
       <Container>
         <Row>
           <Title title="Featured Items" />

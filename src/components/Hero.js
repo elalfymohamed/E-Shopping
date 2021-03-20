@@ -15,14 +15,14 @@ const Hero = () => {
       <Container>
         <Row className="mb-4">
           <Col md={8} className="mb-4">
-            <div className="hero-section__banner">
+            <div className="hero-section__banner banner">
               <Link to="/">
                 <img src={banner_1} alt="Banner" height="320" />
               </Link>
             </div>
           </Col>
           <Col md={4} className="mb-4">
-            <div className="hero-section__banner">
+            <div className="hero-section__banner banner">
               <Link to="/">
                 <img src={banner_2} alt="Banner" height="320" />
               </Link>

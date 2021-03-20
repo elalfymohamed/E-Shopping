@@ -56,3 +56,115 @@
     float: left;
   }
 }
+
+.slick__slide {
+  @include slick__slide;
+
+  .product {
+    @include slick__product;
+    //
+    .image {
+      position: relative;
+      .sale {
+        color: #202020;
+      }
+      .new {
+        color: rgb(190, 30, 30);
+      }
+      .label {
+        @include slick__label;
+      }
+      //
+      .img {
+        @include slick__img;
+      }
+      .compare {
+        @include slick__compare_a_svg_added;
+      }
+      //
+
+      .add-to-cart {
+        @include slick__add-to-cart;
+      }
+    }
+    //
+    .content {
+      background-color: #ffffff;
+      overflow: hidden;
+
+      .category__title {
+        @include slick__category__title;
+      }
+      .price__ratting {
+        @include slick__price__ratting;
+      }
+      .ratting {
+        position: absolute;
+        bottom: 35px;
+        right: 24px;
+
+        .stars {
+          --percent: calc(var(--rating) / 5 * 100%);
+
+          display: inline-block;
+          font-size: var(--star-size);
+          font-family: Times;
+          line-height: 1;
+
+          &::before {
+            content: "★★★★★";
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    &:hover {
+      .image {
+        .compare {
+          a {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .add-to-cart {
+          opacity: 1;
+          visibility: visible;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+    &::after {
+      left: 180%;
+      @include hero__bonner_a_b;
+    }
+    &::before {
+      left: -85%;
+      @include hero__bonner_a_b;
+    }
+    &:hover {
+      &::after {
+        left: -280px;
+        @include hero__bonner_a_b_hov;
+      }
+      &::before {
+        left: 180%;
+        @include hero__bonner_a_b_hov;
+      }
+    }
+  }
+}
