@@ -15,7 +15,7 @@ const List = ({ onPushData }) => {
 
   return (
     <Col lg="12" className="mb-4">
-      <div className="section-featured__product__filter">
+      <div className="product__filter">
         <button className="product__filter__toggle">
           showings
           <span>All</span>

@@ -14,7 +14,7 @@ const Slides = ({
   stars,
 }) => {
   const [added, setAdded] = useState(true);
-  console.log(stars);
+
   return (
     <div className="product">
       <div className="image">

@@ -4,3 +4,6 @@ export { default as Title } from "./SectionTitle";
 export { default as Slick } from "./Slick";
 export { default as SlickButton } from "./SlickButton";
 export { default as Slides } from "./Slides";
+export { default as Feature } from "./Feature";
+export { default as OfferTime } from "./OfferTime";
+export { default as BannerNewArrival } from "./BannerNewArrival";

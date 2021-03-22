@@ -1,0 +1,48 @@
+.section-best-sellers {
+  .feature {
+    background-color: #f6f7f8;
+    padding: 30px;
+    position: relative;
+
+    .feature-wrap {
+      text-align: center;
+      border: 1px solid #e8e8e8;
+      padding: 25px 15px 20px;
+
+      .icon {
+        display: inline-block;
+        // margin-bottom: 14px;
+        position: relative;
+        overflow: hidden;
+        height: 29px;
+        width: 42px;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all 0.3s ease 0s;
+        }
+      }
+      h4 {
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+    &:hover {
+      .icon {
+        img {
+          top: -29px;
+        }
+      }
+    }
+  }
+}
