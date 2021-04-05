@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Col, Row } from "react-bootstrap";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 const HeaderCategory = () => {
+  const [openCategory, setOpenCategory] = useState(false);
   return (
     <div className="header__category__section">
       <Container>
@@ -11,12 +12,19 @@ const HeaderCategory = () => {
           <Col>
             <div className="header__category">
               <div className="header__category__toggle d-block d-lg-none">
-                <button className="category__toggle">
+                <button
+                  className="category__toggle"
+                  onClick={() => setOpenCategory(!openCategory)}
+                >
                   Categories
                   <AiOutlineArrowDown />
                 </button>
               </div>
-              <nav className="header__category__menu">
+              <nav
+                className={`header__category__menu ${
+                  openCategory ? "open__category" : ""
+                }`}
+              >
                 <ul>
                   <li>
                     <Link to="/">Tv &amp; Audio System</Link>

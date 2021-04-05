@@ -27,7 +27,7 @@ const Feature = () => {
   return (
     <>
       {FeatureData.map((item, i) => (
-        <Col lg={4} md={6} className="col-12" key={i}>
+        <Col lg={4} md={6} className="col-12 mb-3" key={i}>
           <div className="feature feature-security">
             <div className="feature-wrap">
               <div className="icon">

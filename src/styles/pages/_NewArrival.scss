@@ -1,2 +1,41 @@
 .section-new-arrival {
+  .section-new-arrival__brand__slider {
+    text-align: center;
+    display: block;
+    position: relative;
+    touch-action: pan-y;
+    .section-new-arrival__slick__list {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      &::after {
+        content: "";
+        background: linear-gradient(
+          to right,
+          rgb(255, 255, 255) 0px,
+          rgba(255, 255, 255, 0.1) 10%,
+          rgba(255, 255, 255, 0.1) 90%,
+          rgb(255, 255, 255) 100%
+        );
+        position: absolute;
+        inset: 0px;
+      }
+      .section-new-arrival__slick__tract {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        // animation: 60s linear 0s infinite normal none running animation_1qdclt7;
+        animation: 60s linear 0s infinite alternate none running animation_1qdclt7;
+        .section-new-arrival__brand__item {
+          img {
+            max-width: 50%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }

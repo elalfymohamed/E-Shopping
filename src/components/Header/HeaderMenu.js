@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeaderMenu = () => {
+// eslint-disable-next-line react/prop-types
+const HeaderMenu = ({ width, breakpoint }) => {
   return (
     <nav>
+      {width < breakpoint ? <button type="button">+</button> : ""}
+
       <ul>
         <li className="active">
           <Link to="/">Home</Link>

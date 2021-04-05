@@ -5,3 +5,6 @@ export { default as Featured } from "./Featured";
 export { default as BestSellers } from "./BestSellers";
 export { default as BestDeals } from "./BestDeals";
 export { default as NewArrival } from "./NewArrival";
+export { default as Footer } from "./Footer";
+// Page Cart
+export { default as MiniCart } from "./Cart/MiniCart";

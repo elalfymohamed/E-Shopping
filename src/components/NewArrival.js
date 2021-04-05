@@ -26,9 +26,7 @@ const NewArrival = () => {
             </Row>
           </Col>
         </Row>
-        <>
-          <BannerNewArrival />
-        </>
+        <BannerNewArrival />
       </Container>
     </section>
   );

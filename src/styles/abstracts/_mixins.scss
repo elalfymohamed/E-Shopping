@@ -107,7 +107,8 @@
     svg {
       line-height: 31px;
       font-size: 20px;
-      vertical-align: -webkit-baseline-middle;
+      //vertical-align: -webkit-baseline-middle;
+      vertical-align: baseline;
     }
     &::before {
       content: attr(data-tooltip);

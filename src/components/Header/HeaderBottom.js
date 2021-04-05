@@ -4,13 +4,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosShuffle } from "react-icons/io";
 import Menu from "./HeaderMenu";
+import HeaderMobile from "./HeaderMobile";
 import logo from "../../assets/logo.png";
 
 const HeaderBottom = () => {
   const [numberCart, setNumberCart] = useState("4");
   const [numberLive, setNumberLive] = useState("6");
   const [addClass, setAddClass] = useState(false);
+  const [width, setWidth] = useState(Inner);
+  const breakpoint = 992;
+  let Inner;
 
+  if (typeof Window !== `undefined`) {
+    Inner = window.innerWidth;
+  }
+
+  //
   const checkScroll = () => {
     if (!addClass && window.pageYOffset > 290) {
       setAddClass(true);
@@ -23,12 +32,16 @@ const HeaderBottom = () => {
     window.addEventListener("scroll", checkScroll);
   });
 
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <div
-      className={`header-section__bottom header__sticky ${
-        addClass ? "header__is__sticky" : ""
-      }`}
-    >
+    // className={`header-section__bottom header__sticky ${addClass ? "header__is__sticky" : ""}`}
+    <div className={`header-section__bottom header__sticky`}>
       <Container>
         <Row className="align-items-center">
           <Col>
@@ -39,9 +52,13 @@ const HeaderBottom = () => {
             </div>
           </Col>
           <Col className="d-contents">
-            <div className="header-section__bottom__menu">
-              <Menu />
-            </div>
+            {width < breakpoint ? (
+              <HeaderMobile width={breakpoint} breakpoint={breakpoint} />
+            ) : (
+              <div className="header-section__bottom__menu">
+                <Menu />
+              </div>
+            )}
           </Col>
           <Col>
             <div className="header-section__bottom__shop__links">
