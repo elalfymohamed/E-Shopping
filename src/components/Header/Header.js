@@ -3,11 +3,11 @@ import HeaderTop from "./HeaderTop";
 import HeaderBottom from "./HeaderBottom";
 import HeaderCategory from "./HeaderCategory";
 
-const Header = () => {
+const Header = ({setOpenCart,openCart}) => {
   return (
     <header className="header-section">
       <HeaderTop />
-      <HeaderBottom />
+      <HeaderBottom setOpenCart={setOpenCart} openCart={openCart} />
       <HeaderCategory />
     </header>
   );
